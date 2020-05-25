@@ -10,7 +10,7 @@ using DatingApp.API.Data;
 
 namespace DatingApp.API.Controllers
 {
-[Authorize]
+// [Authorize]
 [Route("api/[controller]")]
 [ApiController]
 public class ValuesController : ControllerBase
@@ -22,6 +22,7 @@ public class ValuesController : ControllerBase
         
     }
     // GET api/values
+     [AllowAnonymous]
     [HttpGet]
     public IActionResult GetValues()
     {
