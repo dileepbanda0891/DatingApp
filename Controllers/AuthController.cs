@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using System.Threading.Tasks;
 using DatingApp.API.Data;
 using System.Security.Claims;
@@ -15,7 +16,7 @@ using DatingApp.API.Dtos;
 
 namespace DatingApp.API.Controllers
 {
-    
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]  
     public class AuthController : ControllerBase
